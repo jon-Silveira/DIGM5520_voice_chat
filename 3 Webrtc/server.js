@@ -1,4 +1,17 @@
 // This Code is from https://github.com/borjanebbal/webrtc-node-app
+/*https://github.com/borjanebbal/webrtc-node-app
+How to Implement a Video Conference with WebRTC and Node - Borja Nebba
+
+Updated https://github.com/js12lh/DIGM5520_voice_chat/tree/main/3%20Webrtc
+
+This is an implementation of pure WebRTC. The only issue with this code was the syntax of
+the socket.io functions were deprecated. The default google STUN servers provided in the 
+code worked well, this working code allowed me to test the TURN server I created on 
+Amazon ec2. Unfortunately, my server did not work, I would like to troubleshoot this at a
+later time. Since the Google STUN servers work my TURN server maybe be unnecessary. 
+Scaling WebRTC requires some work, as it is only intended for peer-to-peer/ two clients,
+exchanging video streams with several clients increases computation cost.
+*/
 
 const express = require('express')
 const app = express()
