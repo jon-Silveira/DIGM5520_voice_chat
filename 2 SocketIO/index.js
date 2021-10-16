@@ -1,4 +1,18 @@
 // code from https://dev.to/hosseinmobarakian/create-simple-voice-chat-app-with-nodejs-1b70
+/* Create a simple voice chat app with nodejs - h_mobarakian
+https://dev.to/hosseinmobarakian/create-simple-voice-chat-app-with-nodejs-1b70
+
+https://github.com/js12lh/DIGM5520_voice_chat/tree/main/2%20SocketIO
+
+This tutorial uses the server to transfer small packets of audio data. Unlike peer.js it worked
+immediately though there was a significant delay in the information transfer. The client uses 
+the browser’s navigator.mediaDevices.getUserMedia to get the audio data and fileReader() to 
+convert it into a base64String that can be sent over the socket server. But the conversion and 
+the transfer over the server adds a large delay this makes this method of sending audio very 
+impractical for a voice chat feature.
+*/
+
+
 const express = require("express");
 const app = express();
 const handlebars = require("express-handlebars");
